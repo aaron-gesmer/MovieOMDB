@@ -4,20 +4,41 @@
     <button (click)="searchMovie(movieTitle.value)">Search</button>
   </div>
 
-  <div *ngIf="validSearch" class="ahoy-movie">
-    <h2>{{ title }} ({{ year }})</h2>
-    <h3>Directed by {{ director }}</h3>
-    <img [src]="imgUrl">
-    <p>{{ plot }}</p>
-    <button>Add to Watch List</button>
-    <button>Add to Already Watched</button>
+  <div *ngIf="isValidSearch()" class="ahoy-movie">
+    <h2>{{ getTitle() }} ({{ getYear() }})</h2>
+    <h3>Directed by {{ getDirector() }}</h3>
+    <h3>Awards: {{ getAwards() }}</h3>
+    <h4>IMDb Rating: {{ getRatings() }}</h4>
+    <img [src]="getImgUrl()">
+    <p>{{ getPlot() }}</p>
+
+    <button class="already-watched-button" (click)="addToAlreadyWatched()">Add to Already Watched</button>
+    <button class="watch-list-button" (click)="addToWatchList()">Add to Watch List</button>
   </div>
 
-  <div *ngIf="notFound">
+  <div *ngIf="isNotFound()">
     <p>No movie found with that title</p>
   </div>
 
-  <div *ngIf="notProvided">
+  <div *ngIf="isNotProvided()">
     <p>Please provide a title to search for</p>
+  </div>
+
+  <div *ngIf="getAlreadyWatchedList().length">
+    <h3>Already Watched:</h3>
+    <ul>
+      <li *ngFor="let movie of getAlreadyWatchedList(); let i = index">
+        {{ i + 1 }}: {{ movie }} <button (click)="removeFromAlreadyWatched(movie)">Remove</button>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="getWatchList().length">
+    <h3>Watch List:</h3>
+    <ul>
+      <li *ngFor="let movie of getWatchList(); let i = index">
+        {{ i + 1 }}: {{ movie }} <button (click)="seen(movie)">Seen It!</button> <button (click)="removeFromWatchList(movie)">Remove</button>
+      </li>
+    </ul>
   </div>
 </div>

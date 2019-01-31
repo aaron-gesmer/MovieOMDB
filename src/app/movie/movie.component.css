@@ -13,3 +13,21 @@
   margin-left: 5%;
 }
 
+.already-watched-button {
+  margin: 10px;
+  height: 50px;
+  width: 100px;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+}
+
+.watch-list-button {
+  margin: 10px;
+  height: 50px;
+  width: 100px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+}
+
