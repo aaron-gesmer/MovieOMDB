@@ -1,0 +1,23 @@
+<div class="movie">
+  <div class="ahoy-search">
+    <input #movieTitle type="text" (keyup.enter)="searchMovie(movieTitle.value)" placeholder="Search for a movie...">
+    <button (click)="searchMovie(movieTitle.value)">Search</button>
+  </div>
+
+  <div *ngIf="validSearch" class="ahoy-movie">
+    <h2>{{ title }} ({{ year }})</h2>
+    <h3>Directed by {{ director }}</h3>
+    <img [src]="imgUrl">
+    <p>{{ plot }}</p>
+    <button>Add to Watch List</button>
+    <button>Add to Already Watched</button>
+  </div>
+
+  <div *ngIf="notFound">
+    <p>No movie found with that title</p>
+  </div>
+
+  <div *ngIf="notProvided">
+    <p>Please provide a title to search for</p>
+  </div>
+</div>
