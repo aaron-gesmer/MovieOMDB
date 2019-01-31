@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieComponent } from './movie/movie.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { AlreadyWatchedComponent } from './already-watched/already-watched.component';
+import { MyWatchListComponent } from './my-watch-list/my-watch-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
-    NavigationComponent
+    NavigationComponent,
+    AlreadyWatchedComponent,
+    MyWatchListComponent
   ],
   imports: [
     BrowserModule,
