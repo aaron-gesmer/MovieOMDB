@@ -28,7 +28,7 @@
     <h3>Already Watched:</h3>
     <ul>
       <li *ngFor="let movie of getAlreadyWatchedList(); let i = index">
-        {{ i + 1 }}: {{ movie }} <button (click)="removeFromAlreadyWatched(movie)">Remove</button>
+        <button (click)="removeFromAlreadyWatched(movie)">Remove</button>{{ i + 1 }}: {{ movie }}
       </li>
     </ul>
   </div>
@@ -37,7 +37,7 @@
     <h3>Watch List:</h3>
     <ul>
       <li *ngFor="let movie of getWatchList(); let i = index">
-        {{ i + 1 }}: {{ movie }} <button (click)="seen(movie)">Seen It!</button> <button (click)="removeFromWatchList(movie)">Remove</button>
+        <button (click)="seen(movie)">Seen It!</button> <button (click)="removeFromWatchList(movie)">Remove</button> {{ i + 1 }}: {{ movie }}
       </li>
     </ul>
   </div>
