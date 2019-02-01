@@ -5,10 +5,10 @@
   </div>
 
   <div *ngIf="isValidSearch()" class="ahoy-movie">
-    <h2>{{ getTitle() }} ({{ getYear() }})</h2>
-    <h3>Directed by {{ getDirector() }}</h3>
-    <h3>Awards: {{ getAwards() }}</h3>
-    <h4>IMDb Rating: {{ getRatings() }}</h4>
+    <h1>{{ getTitle() }} ({{ getYear() }})</h1>
+    <h2>Directed by {{ getDirector() }}</h2>
+    <h2>Awards: {{ getAwards() }}</h2>
+    <h2>Rating: {{ getRatings() }}<img class="imdb-logo" src="https://cdn1.iconfinder.com/data/icons/square-logo-buttons/512/imdb-black-512.png"></h2>
     <img [src]="getImgUrl()">
     <p>{{ getPlot() }}</p>
 
@@ -28,7 +28,7 @@
     <h3>Already Watched:</h3>
     <ul>
       <li *ngFor="let movie of getAlreadyWatchedList(); let i = index">
-        <button (click)="removeFromAlreadyWatched(movie)">Remove</button>{{ i + 1 }}: {{ movie }}
+        <button (click)="removeFromAlreadyWatched(movie)">Remove</button><button (click)="searchMovie(movie)">Lookup</button>{{ i + 1 }}: {{ movie }}
       </li>
     </ul>
   </div>
@@ -37,7 +37,7 @@
     <h3>Watch List:</h3>
     <ul>
       <li *ngFor="let movie of getWatchList(); let i = index">
-        <button (click)="seen(movie)">Seen It!</button> <button (click)="removeFromWatchList(movie)">Remove</button> {{ i + 1 }}: {{ movie }}
+        <button (click)="seen(movie)">Seen It!</button> <button (click)="removeFromWatchList(movie)">Remove</button><button (click)="searchMovie(movie)">Lookup</button>{{ i + 1 }}: {{ movie }}
       </li>
     </ul>
   </div>
