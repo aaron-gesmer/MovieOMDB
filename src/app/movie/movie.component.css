@@ -20,6 +20,7 @@
   background-color: blue;
   color: white;
   border-radius: 10px;
+  box-shadow: 5px 10px 8px #888888;
 }
 
 .watch-list-button {
@@ -29,5 +30,12 @@
   background-color: green;
   color: white;
   border-radius: 10px;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.imdb-logo {
+  width: 30px;
+  height: 30px;
+  margin: -10px 0 0 10px;
 }
 
