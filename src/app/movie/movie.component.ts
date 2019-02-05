@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MovieComponent implements OnInit {
 
-  private api = 'http://www.omdbapi.com/?apikey=';
+  private api = 'https://www.omdbapi.com/?apikey=';
   private apiKey = 'c9e12726';
 
   private validSearch = false;
