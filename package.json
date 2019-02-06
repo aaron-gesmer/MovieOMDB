@@ -1,5 +1,5 @@
 {
-  "name": "mooveez",
+  "name": "movie_omdb",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "publish": "ng build --prod --base-href https://aaron-gesmer.github.io/MovieOMDB/ && ngh"
   },
   "private": true,
   "dependencies": {

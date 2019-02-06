@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieComponent } from './movie/movie.component';
+import { MovieService } from './movie.service';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AlreadyWatchedComponent } from './already-watched/already-watched.component';
 import { MyWatchListComponent } from './my-watch-list/my-watch-list.component';
@@ -22,7 +23,7 @@ import { MyWatchListComponent } from './my-watch-list/my-watch-list.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
