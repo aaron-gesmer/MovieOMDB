@@ -1,41 +1,111 @@
-.movie {
-  margin: 50px;
-}
-
 .ahoy-movie {
-  text-align: center;
+  margin: 15px;
+  padding: 15px;
   width: 45%;
-  margin-left: 30%;
-}
-
-.ahoy-search {
+  float: left;
   text-align: center;
-  margin-left: 5%;
 }
 
-.already-watched-button {
+.ahoy-search input {
+  padding: 5px;
+  width: 40%;
+  height: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.ahoy-search button {
+  margin: 10px;
+  height: 25px;
+  width: 75px;
+  background-color: olivedrab;
+  color: white;
+  border-radius: 10px;
+}
+
+.imdb-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.rt-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.mc-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.ahoy-movie-valid-result p {
+  text-align: justify;
+}
+
+.ahoy-ratings-list ul {
+  list-style: none;
+}
+
+.ahoy-lists {
+  margin: 10px;
+  padding: 10px;
+  width: 45%;
+  float: right;
+  text-align: left;
+}
+
+.ahoy-lists ul {
+  list-style: none;
+  list-style-position: outside;
+}
+
+.ahoy-lists a {
+  text-decoration: none;
+}
+
+.ahoy-lists a:hover {
+  color: white;
+}
+
+.ahoy-lists h3 {
+  text-align: center;
+}
+
+.ahoy-already-watched {
+  padding: 5px;
+  float: left;
+  width: 45%;
+  background-color: aquamarine;
+}
+
+.ahoy-watch-list {
+  padding: 5px;
+  float: right;
+  width: 45%;
+  background-color: aquamarine;
+}
+
+.ahoy-movie-valid-result {
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+.ahoy-already-watched-button {
   margin: 10px;
   height: 50px;
   width: 100px;
   background-color: blue;
   color: white;
   border-radius: 10px;
-  box-shadow: 5px 10px 8px #888888;
+  box-shadow: 1px 1px 1px #888888;
 }
 
-.watch-list-button {
+.ahoy-watch-list-button {
   margin: 10px;
   height: 50px;
   width: 100px;
   background-color: green;
   color: white;
   border-radius: 10px;
-  box-shadow: 5px 10px 8px #888888;
+  box-shadow: 1px 1px 1px #888888;
 }
-
-.imdb-logo {
-  width: 30px;
-  height: 30px;
-  margin: -10px 0 0 10px;
-}
-
